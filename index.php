@@ -1,10 +1,15 @@
 <?php
 require_once 'core/init.php';
 
-$user = DB::getInstance()->query("SELECT username FROM users WHERE username = ?", array('wildan'));
+$user = DB::getInstance()->query('SELECT * FROM users');
 
-if($user->error()) {
-	echo 'False';
+if(!$user->count()) {
+	echo 'no record';
 } else {
-	echo 'True';
+	foreach ($user->results() as $user) {
+		echo $user->username, '<br>';
+	}
 }
+
+
+

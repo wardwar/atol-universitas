@@ -28,7 +28,7 @@ class DB {
 			$x=1;
 			if(count($params)) {
 				foreach($params as $param) {
-					$this->_query->bindValue($x,$param);
+					$this->_query->bindValue($x, $param);
 					$x++;
 				}
 			}
@@ -42,8 +42,94 @@ class DB {
 		return $this;
 	}
 
+	public function action($action, $table, $where = array()) {
+		if(count($where) === 3) {
+			$operetors = array('=', '>', '<', '>=', '<=');
+
+			$field		= 	$where[0];
+			$operator	=	$where[1];
+			$value 		=	$where[2];
+
+			if(in_array($operator, $operetors)) {
+				$sql = "{$action} FROM {$table} WHERE {$field} {$operator} ? ";
+				
+				if(!$this->query($sql, array($value))->error()) {
+					return $this;
+				}
+			}
+		}
+		return false;
+	}
+
+	public function get($table, $where) {
+			return $this->action('SELECT *', $table, $where);
+	}
+
+	public function delete($table, $where) {
+		return $this->action('DELETE', $table, $where);
+	}
+
+	public function results() {
+		return $this->_results;
+	}
+
+	public function insert($table, $fields = array()) {
+			$keys = array_keys($fields);
+			$values = '';
+			$x = 1;
+
+			foreach ($fields as $field) {
+				$values .= '?';
+
+				if($x < count($fields)) {
+					$values .= ', ';
+				}
+
+				$x++;
+			}
+
+			$sql = "INSERT INTO {$table} (`" . implode('`, `', $keys) . "`) VALUES ({$values})";
+
+			if(!$this->query($sql, $fields)->error()) {
+				return true;
+			}
+			return false;
+		}
+		
+	
+
+	public function update($table, $id, $fields) {
+		$set = '';
+		$i = 1;
+		$where = '';
+
+		foreach ($fields as $name => $value) {
+			$set .="`{$name}`";
+			$set .=" = ? ";
+			if($i < count($fields)) {
+				$set .=", ";
+			}
+			$i++;
+		}
+		foreach ($id as $key) {
+			$where .= "{$key} ";
+
+		}
+
+		$sql = "UPDATE {$table} SET {$set} WHERE {$where}";
+		
+		if(!$this->query($sql, $fields)->error()) {
+				return true;
+			}
+			return false;
+	}
+
 	public function error() {
 		return $this->_error;
+	}
+
+	public function count() {
+		return $this->_count;
 	}
 	
 }
