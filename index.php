@@ -1,15 +1,10 @@
 <?php
 require_once 'core/init.php';
 
-$user = DB::getInstance()->query('SELECT * FROM users');
+DB::getInstance()->insert('users',array(
+	'username' => 'wildan',
+	'password' => 'wildan',
+	'salt' => 'salt',
+	'name'=> 'wildan'));
 
-if(!$user->count()) {
-	echo 'no record';
-} else {
-	foreach ($user->results() as $user) {
-		echo $user->username, '<br>';
-	}
-}
-
-
-
+		

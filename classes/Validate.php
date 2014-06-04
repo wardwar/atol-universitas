@@ -22,12 +22,12 @@ public function check($source, $items = array()) {
 				switch ($rule) {
 					case 'min':
 						if(strlen($value) < $rule_value) {
-							$this->addError("{$item} tidak boleh kurang dari {$rule_value} karakter.")
+							$this->addError("{$item} tidak boleh kurang dari {$rule_value} karakter.");
 						}
 						break;
 					case 'max':
 						if(strlen($value) > $rule_value) {
-							$this->addError("{$item} tidak boleh lebih dari {$rule_value} karakter.")
+							$this->addError("{$item} tidak boleh lebih dari {$rule_value} karakter.");
 						}
 						break;
 					case 'matches':
@@ -46,7 +46,7 @@ public function check($source, $items = array()) {
 		}
 	}
 
-	if(empty($this->_errors) {
+	if(empty($this->_errors)) {
 		$this->_passed = true;
 	}
 

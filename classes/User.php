@@ -8,7 +8,7 @@ class User {
 	public function __construct($user =null) {
 		$this->_db = DB::getInstance();
 
-		$this->_sessionName = Config::get('sesstion/session_name');
+		$this->_sessionName = Config::get('session/session_name');
 
 		if(!$user) {
 			if(Session::exists($this->_sessionName)) {
