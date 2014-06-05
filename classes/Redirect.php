@@ -16,4 +16,8 @@ class Redirect {
 			exit();
 		}
 	}
+
+	public static function baseUrl() {
+		return self::to("http://" . $_SERVER['SERVER_NAME']."/github/atol-universitas/");
+	}
 }

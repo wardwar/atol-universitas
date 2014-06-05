@@ -27,18 +27,15 @@ body {
 }
 
 #error {
-	background: rgba(0, 0, 0,0.4);
 	border-radius: 0;
 	border : 1px solid rgba(0, 0, 0,0);
-	color: white;
-	margin-top: 19%;
 	margin-left: 15%;
 	height: auto;
 }
 
 @media(min-width:320px) {
 	#btn-login {
-		margin-top: 1%;
+
 		margin-left: 16%;
 	}
 
@@ -46,7 +43,7 @@ body {
 
 @media(min-width:768px) {
 	#btn-login {
-		margin-top: 36%;
+
 	}
 
 
@@ -54,21 +51,21 @@ body {
 
 @media(min-width:995px) {
 	#btn-login {
-		margin-top: 81%;
+
 	}
 	#login{
 	height: 60px;
-	font-size: 2.7em;
+	font-size: 1.7em;
 }
 
 @media(min-width:1280px) {
 	#btn-login {
-		margin-top: 61%;
+	
 	}
 	#login{
 
 	height: 60px;
-	font-size: 2.7em;
+	font-size: 1.7em;
 }
 
 }
@@ -107,7 +104,7 @@ src: url(../fonts/WOL_Reg.woff);
 }
 .loader {
   text-indent: -9999em;
-  margin: 12em auto;
+  margin: 4em auto;
   margin-bottom: 0;
   position: relative;
   font-size: 11px;

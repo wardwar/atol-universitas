@@ -73,6 +73,10 @@ class DB {
 		return $this->_results;
 	}
 
+	public function first() {
+		return $this->_results[0];
+	}
+
 	public function insert($table, $fields = array()) {
 			$keys = array_keys($fields);
 			$values = '';

@@ -18,8 +18,17 @@ $GLOBALS['config'] = array(
 		)
 );
 
+if($level == 2) {
+spl_autoload_register(function($class){
+	require_once '../../classes/' . $class . '.php';
+});
+
+require_once '../../functions/sanitize.php';
+
+} else if($level == 1){
 spl_autoload_register(function($class){
 	require_once 'classes/' . $class . '.php';
 });
 
 require_once 'functions/sanitize.php';
+}

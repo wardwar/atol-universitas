@@ -1,10 +1,10 @@
 <?php
+$level = 1;
 require_once 'core/init.php';
 
-DB::getInstance()->insert('users',array(
-	'username' => 'wildan',
-	'password' => 'wildan',
-	'salt' => 'salt',
-	'name'=> 'wildan'));
-
-		
+$user = new User();
+if($user->isLoggedIn()):
+?>
+<a href="logout.php">logout</a>
+<?php
+endif;
