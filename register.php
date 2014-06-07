@@ -1,7 +1,7 @@
 <?php
 $level = 1;
 require_once 'core/init.php';
- echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; 
+
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) {
 		$validate = new Validate();
