@@ -1,7 +1,3 @@
-<?php
-$level = 1;
-require_once '/core/init.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

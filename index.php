@@ -1,5 +1,5 @@
 <?php
-$level = 1;
+$level = 0;
 require_once 'core/init.php';
 
 $user = new User();

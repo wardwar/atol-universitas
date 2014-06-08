@@ -1,4 +1,7 @@
 <?php
+$level = 0;
+require_once 'core/init.php';
+
 include 'includes/overall/header.php';
 ?>
 <body id="body-login">

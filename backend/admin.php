@@ -1,7 +1,13 @@
 <?php
-$level = 0;
-require_once 'core/init.php';
+$level = 1;
+require_once '../core/init.php';
 
+// head
+include '../includes/overall/header.php';
+// end head
+?>
+
+<?php
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) {
 		$validate = new Validate();
@@ -57,27 +63,36 @@ if(Input::exists()) {
 }
 ?>
 
-<form action="" method="post">
+<form action="" method="post" enctype="multipart/form-data">
 	<div class="field">
-		<label for="username">Username</label>
-		<input type="text" name="username" id="username" value="<?php echo Input::get('username'); ?>" autocomplete="off">
+		<label for="nip">NIP</label>
+		<input type="text" name="nip" value="<?php echo Input::get('nip'); ?>" autocomplete="off">
 	</div>
 
 	<div class="field">
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" value="" autocomplete="off">
+		<label for="nama">Nama</label>
+		<input type="text" name="nama"  value="<?php echo Input::get('nama'); ?>" autocomplete="off">
 	</div>
 
 	<div class="field">
-		<label for="retype">Ulangi Password</label>
-		<input type="password" name="retype" id="retype" value="" autocomplete="off">
+		<label for="jabatan">Jabatan</label>
+		<input type="text" name="nama"  value="<?php echo Input::get('jabatan'); ?>" autocomplete="off">
 	</div>
 
 	<div class="field">
-		<label for="name">Nama</label>
-		<input type="text" name="name" id="name" value="<?php echo Input::get('name'); ?>" autocomplete="off">
+		<label for="photo">Photo</label>
+		<input type="file" name="photo" value="">
 	</div>
+	
 	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 	<input type="submit" value="Register">
 	
 </form>
+
+
+
+
+
+<?php
+include '../includes/overall/footer.php';
+?>
