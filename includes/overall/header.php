@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/buttons.css" rel="stylesheet">
-    <link href="css/sb-admin.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
-
+        <link href="<?=Url::base()?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?=Url::base()?>css/style.css" rel="stylesheet">
+        <link href="<?=Url::base()?>css/buttons.css" rel="stylesheet">
+        <link href="<?=Url::base()?>css/sb-admin.css" rel="stylesheet">
+        <link href="<?=Url::base()?>font-awesome/css/font-awesome.css" rel="stylesheet">
+        
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

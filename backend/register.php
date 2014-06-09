@@ -1,6 +1,6 @@
 <?php
-$level = 0;
-require_once 'core/init.php';
+$level = 1;
+require_once '../core/init.php';
 
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) {

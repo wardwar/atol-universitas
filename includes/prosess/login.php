@@ -14,6 +14,7 @@ if(Input::exists()) {
       $user = new User();
       $login = $user->login(Input::get('username'), Input::get('password'));
 
+     
       if($login) {
         echo 'success';
       } else {

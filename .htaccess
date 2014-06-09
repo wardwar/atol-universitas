@@ -1,0 +1,38 @@
+ErrorDocument 404 /github/atol-universitas/includes/errors/404.php 
+
+<IfModule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} /+[^\.]+$
+ RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+</IfModule>
+
+RewriteEngine on 
+
+RewriteRule ^admin/$ backend/admin.php?lsm=admin [L]
+
+RewriteRule ^admin/profile/$ backend/admin.php?lsm=profile [L]
+RewriteRule ^admin/visimisi/$ backend/admin.php?lsm=visimisi [L]
+RewriteRule ^admin/sejarah/$ backend/admin.php?lsm=sejarah [L]
+RewriteRule ^admin/tujuan/$ backend/admin.php?lsm=tujuan [L]
+RewriteRule ^admin/logo/$ backend/admin.php?lsm=logo [L]
+RewriteRule ^admin/fasilitas/$ backend/admin.php?lsm=fasilitas [L]
+RewriteRule ^admin/slide/$ backend/admin.php?lsm=slide [L]
+RewriteRule ^admin/dosen/$ backend/admin.php?lsm=dosen [L]
+RewriteRule ^admin/mahasiswa/$ backend/admin.php?lsm=mahasiswa [L]
+RewriteRule ^admin/karyawan/$ backend/admin.php?lsm=karyawan [L]
+RewriteRule ^admin/indosen/$ backend/admin.php?lsm=indosen [L]
+RewriteRule ^admin/inmahasiswa/$ backend/admin.php?lsm=inmahasiswa [L]
+RewriteRule ^admin/inkaryawan/$ backend/admin.php?lsm=inkaryawan [L]
+RewriteRule ^admin/fakultas/$ backend/admin.php?lsm=fakultas [L]
+RewriteRule ^admin/jurusan/$ backend/admin.php?lsm=jurusan [L]
+RewriteRule ^admin/agenda/$ backend/admin.php?lsm=agenda [L]
+RewriteRule ^admin/bukutamu/$ backend/admin.php?lsm=bukutamu [L]
+RewriteRule ^admin/kerjasama/$ backend/admin.php?lsm=kerjasama [L]
+
+RewriteRule ^logout/$ backend/logout.php?module=logout [L]
+RewriteRule ^login/$ backend/login.php?module=login [L]
+
+
+
+
+Options All -Indexes
+

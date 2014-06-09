@@ -25,8 +25,8 @@ class User {
 		}
 	}
 
-	public function create($fields) {
-		if(!$this->_db->insert('users',$fields)) {
+	public function create($table,$fields) {
+		if(!$this->_db->insert($table,$fields)) {
 			throw new Exception("Error Processing Request");
 			
 		}
@@ -46,7 +46,7 @@ class User {
 		return false;
 	}
 
-	public function login ($username = null, $password = null) {
+	public function login($username = null, $password = null) {
 
 		$user = $this->find($username);
 

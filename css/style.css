@@ -157,42 +157,6 @@ src: url(../fonts/WOL_Reg.woff);
 
 /*administrator*/
 
-#administrator {
-  background: #ecf0f1;
-}
-
-#left-menu {
-  width: 20em;
-  top: 0;
-  bottom: 0;
-  margin: 0;
-  border-radius:0;
-  position: fixed;
-}
-
-#top-menu {
-   background: #34495e;
-   border-bottom:solid 1px #2c3e50;
-}
-
-#icon-top {
-  color: white;
-}
-
-
-#icon-top:hover {
-  color:#3498db ;
-}
-
-
-#con-administrator {
-  width: 
-
-}
-
-#con-admin-2 {
-  margin-right: 40px;
-}
 
 
 /*end administrator*/

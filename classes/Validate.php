@@ -13,7 +13,12 @@ public function check($source, $items = array()) {
 	foreach($items as $item => $rules) {
 		foreach($rules as $rule => $rule_value) {
 
-			$value = $source[$item];
+			if($source == $_FILES){
+				$value = $source[$item]['name'];
+			}else {
+				$value = $source[$item];
+			}
+			
 			$item = escape($item);
 
 			if($rule == 'required' && empty($value)) {
@@ -39,6 +44,20 @@ public function check($source, $items = array()) {
 						$check = $this->_db->get($rule_value, array($item,'=',$value));
 						if($check->count()) {
 							$this->addError("{$item} sudah ada");
+						}
+						break;
+					case 'preg':
+						if(preg_match($rule_value,$value) == false){
+						$this->addError("{$item} hanya angka yang di perbolehkan");
+						}
+						break;
+					case 'allowed':
+						$file_name = $_FILES[$item]['name'];
+						$file_extn = explode('.', $file_name);
+						$extn = strtolower(end($file_extn));
+
+						if(in_array($extn, $rule_value) === false){
+							$this->addError('Extensi photo harus : ' . implode(' , ', $rule_value) . '.');
 						}
 						break;
 				}

@@ -9,6 +9,9 @@ class Input {
 			case 'get':
 					return (!empty($_GET)) ? true : false;
 				break;
+			case 'file':
+					return (!empty($_FILES)) ? true : false;
+				break;
 			default:
 					return false;
 				break;
@@ -20,6 +23,12 @@ class Input {
 			return $_POST[$item];
 		} else if(isset($_GET[$item])) {
 			return $_GET[$item];
+		} else if(isset($_FILES[$item])){
+			$file = array(
+				'tmp' => $_FILES[$item]['tmp_name'],
+				'name' => $_FILES[$item]['name']
+				);
+			return $file;
 		}
 		return '';
 	}

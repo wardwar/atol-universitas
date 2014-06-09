@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 	 			setTimeout(function() {
 	 				if(result =='success'){
-	 				window.location='http://localhost/github/atol-universitas';
+	 				window.location='http://localhost/github/atol-universitas/admin';
                }else{
                      $("#error").fadeIn(200).html(result);
                      $("#tombol").fadeIn(100);

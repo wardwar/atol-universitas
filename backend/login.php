@@ -1,8 +1,8 @@
 <?php
-$level = 0;
-require_once 'core/init.php';
+$level = 1;
+require_once '../core/init.php';
 
-include 'includes/overall/header.php';
+include '../includes/overall/header.php';
 ?>
 <body id="body-login">
  <div class="jumbotron" id="jumbotron">
@@ -10,7 +10,7 @@ include 'includes/overall/header.php';
   <div class="container">
        <h2>Login Admin</h2>
 
-    <form action="includes/prosess/login.php" method="post" class="login form-horizontal" role="form">
+    <form action="<?=Url::base()?>includes/prosess/login.php" method="post" class="login form-horizontal" role="form">
       
       <div class="col-md-4 col-sm-6">
 
@@ -49,5 +49,5 @@ include 'includes/overall/header.php';
  </div><!-- end Jumbotron -->
 
 <?php
-include 'includes/overall/footer.php';
+include '../includes/overall/footer.php';
 ?>
