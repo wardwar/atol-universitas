@@ -48,23 +48,8 @@
 	                            </ul>
 	                            <!-- /.nav-thrid-level -->
 	                        </li>
-	                         <li>
-	                            <a href="#"><i class="glyphicon glyphicon-list-alt fa-fw"></i> Data Table<span class="fa arrow"></span></a>
-	                            <ul class="nav nav-second-level">
-	                                <li>
-	                                    <a href="<?=Url::base()?>admin/dosen">Dosen</a>
-	                                </li>
-	                                <li>
-	                                    <a href="<?=Url::base()?>admin/mahasiswa">Mahasiswa</a>
-	                                </li>
-	                                <li>
-	                                    <a href="<?=Url::base()?>admin/karyawan">Karyawan</a>
-	                                </li>
-	                            </ul>
-	                            <!-- /.nav-four-level -->
-	                        </li>
 	                        <li>
-	                            <a href="#"><i class="glyphicon glyphicon-import fa-fw"></i> Input Data Table<span class="fa arrow"></span></a>
+	                            <a href="#"><i class="glyphicon glyphicon-import fa-fw"></i> Pengelolaan Data Table<span class="fa arrow"></span></a>
 	                            <ul class="nav nav-second-level">
 	                                <li>
 	                                    <a href="<?=Url::base()?>admin/indosen">Dosen</a>

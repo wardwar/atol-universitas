@@ -1,6 +1,6 @@
 <?php
-$level = 2;
-require_once '../../core/init.php';
+$level = 3;
+require_once '../../../core/init.php';
 $err = array();
 if(Input::exists()) {
 

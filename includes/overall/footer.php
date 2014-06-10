@@ -5,6 +5,14 @@
 	    <script src="<?=Url::base()?>js/script.js"></script>
 	    <script src="<?=Url::base()?>js/sb-admin.js"></script>
 	    <script src="<?=Url::base()?>js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	    <!-- chart -->
+	    <script src="<?=Url::base()?>js/chart/dashboard-demo.js"></script>
+	    <script src="<?=Url::base()?>js/plugins/morris/raphael-2.1.0.min.js"></script>
+    	<script src="<?=Url::base()?>js/plugins/morris/morris.js"></script>
+    	<script src="<?=Url::base()?>js/plugins/morris/morris.js"></script>
+
+    	<script src="<?=Url::base()?>js/source/canvasjs.min.js"></script>
+    	<script src="<?=Url::base()?>js/chart/dynamic.js"></script>
 
   </body>
 </html>

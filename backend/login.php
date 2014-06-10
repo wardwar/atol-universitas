@@ -10,7 +10,7 @@ include '../includes/overall/header.php';
   <div class="container">
        <h2>Login Admin</h2>
 
-    <form action="<?=Url::base()?>includes/prosess/login.php" method="post" class="login form-horizontal" role="form">
+    <form action="<?=Url::base()?>backend/includes/process/login.php" method="post" class="login form-horizontal" role="form">
       
       <div class="col-md-4 col-sm-6">
 
@@ -39,7 +39,7 @@ include '../includes/overall/header.php';
 
     <div class="col-md-6 col-sm-12">
       <div class="container">
-        <div class="alert alert-danger text-center center" id="error"></div>
+        <div class="alert" id="error"></div>
       </div>
     </div>
 

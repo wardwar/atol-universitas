@@ -22,9 +22,7 @@ if(!$user->isLoggedIn()){
 		include 'includes/cuts/page-header.php'; //page header
 
 		// admin content
-		if($_GET['lsm'] == 'admin') {
-		include 'includes/cuts/dashboard.php';
-		}
+		include 'includes/process/admin-content.php';
 		// end admin content
  		include 'includes/cuts/footer.php'; //footer
 }

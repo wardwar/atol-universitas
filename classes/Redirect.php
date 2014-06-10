@@ -18,6 +18,6 @@ class Redirect {
 	}
 
 	public static function baseUrl() {
-		return self::to("http://" . $_SERVER['SERVER_NAME']."/github/atol-universitas/");
+		return self::to(Url::base());
 	}
 }

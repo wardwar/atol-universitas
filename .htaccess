@@ -1,4 +1,5 @@
 ErrorDocument 404 /github/atol-universitas/includes/errors/404.php 
+ErrorDocument 403 /github/atol-universitas/includes/errors/403.php 
 
 <IfModule mod_rewrite.c>
  RewriteCond %{REQUEST_URI} /+[^\.]+$
