@@ -10,9 +10,10 @@
         <link href="<?=Url::base()?>css/style.css" rel="stylesheet">
         <link href="<?=Url::base()?>css/buttons.css" rel="stylesheet">
         <link href="<?=Url::base()?>css/sb-admin.css" rel="stylesheet">
-        <link href="<?=Url::base()?>font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="<?=Url::base()?>font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="<?=Url::base()?>css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
         <link href="<?=Url::base()?>css/plugins/timeline/timeline.css" rel="stylesheet">
+        <link href="<?=Url::base()?>css/main.css" rel="stylesheet">
         
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

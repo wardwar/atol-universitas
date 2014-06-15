@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $level = 1;
 require_once '../core/init.php';
 

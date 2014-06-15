@@ -1,10 +1,21 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
 
-$level = 2;
-require_once '../../core/init.php';
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-include '../overall/header.php';
-?>
+    <title>Sidebar Page - Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
 <body>
 
@@ -17,6 +28,7 @@ include '../overall/header.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                 <a class="navbar-brand" href="index.html">Modern Business</a>
             </div>
 
@@ -60,11 +72,11 @@ include '../overall/header.php';
                         <ul class="dropdown-menu">
                             <li><a href="full-width.html">Full Width Page</a>
                             </li>
-                            <li><a href="sidebar.html">Sidebar Page</a>
+                            <li class="active"><a href="sidebar.html">Sidebar Page</a>
                             </li>
                             <li><a href="faq.html">FAQ</a>
                             </li>
-                            <li class="active"><a href="404.html">404</a>
+                            <li><a href="404.html">404</a>
                             </li>
                             <li><a href="pricing.html">Pricing Table</a>
                             </li>
@@ -77,46 +89,70 @@ include '../overall/header.php';
         <!-- /.container -->
     </nav>
 
+    <!-- Page Content -->
+
     <div class="container">
 
         <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">404
-                    <small>Page Not Found</small>
-                </h1>
-                <ol class="breadcrumb">
+            <div class="col-md-3 col-sm-4 sidebar">
+                <ul class="nav nav-stacked nav-pills">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active">404</li>
-                </ol>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <p class="error-404">404</p>
-                <p class="lead">The page you're looking for could not be found.</p>
-                <p>Here are some helpful links to help you find what you're looking for:</p>
-                <ul>
-                    <li><a href="#">Home</a>
+                    <li><a href="about.html">About</a>
                     </li>
-                    <li><a href="#">About</a>
+                    <li><a href="services.html">Services</a>
                     </li>
-                    <li><a href="#">Services</a>
+                    <li><a href="contact.php">Contact</a>
                     </li>
-                    <li><a href="#">Contact</a>
+                    <li class="disabled"><a href="#">Portfolio</a>
                     </li>
-                    <li><a href="#">Blog</a>
+                    <li><a href="portfolio-1-col.html">1 Column Portfolio</a>
                     </li>
-                    <li><a href="#">Other</a>
+                    <li><a href="portfolio-2-col.html">2 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-3-col.html">3 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-4-col.html">4 Column Portfolio</a>
+                    </li>
+                    <li><a href="portfolio-item.html">Single Portfolio Item</a>
+                    </li>
+                    <li class="disabled"><a href="#">Blog</a>
+                    </li>
+                    <li><a href="blog-home-1.html">Blog Home 1</a>
+                    </li>
+                    <li><a href="blog-home-2.html">Blog Home 2</a>
+                    </li>
+                    <li><a href="blog-post.html">Blog Post</a>
+                    </li>
+                    <li class="disabled"><a href="#">Blog</a>
+                    </li>
+                    <li><a href="full-width.html">Full Width Page</a>
+                    </li>
+                    <li class="active"><a href="sidebar.html">Sidebar Page</a>
+                    </li>
+                    <li><a href="faq.html">FAQ</a>
+                    </li>
+                    <li><a href="404.html">404</a>
+                    </li>
+                    <li><a href="pricing.html">Pricing Table</a>
                     </li>
                 </ul>
             </div>
 
+            <div class="col-md-9 col-sm-8">
+                <h1 class="page-header">Sidebar Page
+                    <small>For Deeper Customization</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Full Width Page</li>
+                </ol>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam placerat nunc ut tellus tristique, non posuere neque iaculis. Fusce aliquet dui ut felis rhoncus, vitae molestie mauris auctor. Donec pellentesque feugiat leo a adipiscing. Pellentesque quis tristique eros, sed rutrum mauris.</p>
+            </div>
+
         </div>
+        <!-- /.row -->
 
     </div>
     <!-- /.container -->

@@ -1,14 +1,4 @@
-<?php
-
-$level = 2;
-require_once '../../core/init.php';
-
-include '../overall/header.php';
-?>
-
-<body>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -17,13 +7,14 @@ include '../overall/header.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Modern Business</a>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <a class="navbar-brand" href="<?=Url::base()?>">UNIBO</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="about.html">About</a>
+                    <li <?php if($nav == 'profile') echo "class='active'";?>><a href="<?php if($nav != 'profile') echo 'profile.html';?>">Profile</a>
                     </li>
                     <li><a href="services.html">Services</a>
                     </li>
@@ -64,7 +55,7 @@ include '../overall/header.php';
                             </li>
                             <li><a href="faq.html">FAQ</a>
                             </li>
-                            <li class="active"><a href="404.html">404</a>
+                            <li><a href="404.html">404</a>
                             </li>
                             <li><a href="pricing.html">Pricing Table</a>
                             </li>
@@ -76,71 +67,3 @@ include '../overall/header.php';
         </div>
         <!-- /.container -->
     </nav>
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">404
-                    <small>Page Not Found</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a>
-                    </li>
-                    <li class="active">404</li>
-                </ol>
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <p class="error-404">404</p>
-                <p class="lead">The page you're looking for could not be found.</p>
-                <p>Here are some helpful links to help you find what you're looking for:</p>
-                <ul>
-                    <li><a href="#">Home</a>
-                    </li>
-                    <li><a href="#">About</a>
-                    </li>
-                    <li><a href="#">Services</a>
-                    </li>
-                    <li><a href="#">Contact</a>
-                    </li>
-                    <li><a href="#">Blog</a>
-                    </li>
-                    <li><a href="#">Other</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-    <div class="container">
-
-        <hr>
-
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Company 2013</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modern-business.js"></script>
-
-</body>
-
-</html>
