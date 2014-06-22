@@ -6,6 +6,8 @@ ErrorDocument 403 /github/atol-universitas/includes/errors/403.php
  RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 </IfModule>
 
+
+
 RewriteEngine on
 
 RewriteRule ^admin/$ backend/admin.php?lsm=admin [L]

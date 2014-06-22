@@ -23,7 +23,7 @@
 	                    			echo 'Fasilitas';
 	                    			break;
 	                    		case 'slide':
-	                    			echo 'Gambar Slide Branda';
+	                    			include 'includes/cuts/contents/slide.php';
 	                    			break;
 	                    		case 'dosen':
 	                    			echo 'Data Dosen';

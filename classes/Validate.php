@@ -13,6 +13,7 @@ public function check($source, $items = array()) {
 	foreach($items as $item => $rules) {
 		foreach($rules as $rule => $rule_value) {
 
+			
 			if($source == $_FILES){
 				$value = $source[$item]['name'];
 			}else {
@@ -22,7 +23,7 @@ public function check($source, $items = array()) {
 			$item = escape($item);
 
 			if($rule == 'required' && empty($value)) {
-				$this->addError("{$item} is required");
+				$this->addError("{$rules['nama']} is required");
 			} else if(!empty($value)) {
 				switch ($rule) {
 					case 'min':

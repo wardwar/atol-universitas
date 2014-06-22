@@ -1,5 +1,5 @@
-#body-login { 
- background: url('../assets/img/bg_login.jpg') no-repeat center center fixed; 
+#body-login {
+ background: url('../assets/img/bg_login.jpg') no-repeat center center fixed;
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
@@ -36,7 +36,7 @@ background-color:#333;
 
 @media(min-width:320px) {
 	#btn-login {
-    
+
 	}
    #error {
     margin-left: 0;
@@ -71,9 +71,9 @@ background-color:#333;
 
 @media(min-width:1280px) {
 	#btn-login {
-	
+
 	}
-  
+
 	#login{
 
 	height: 60px;
@@ -91,6 +91,24 @@ background-color:#333;
 {
 font-family: wol_reg;
 src: url(../fonts/WOL_Reg.woff);
+}
+
+@font-face
+{
+font-family: lato_reg;
+src: url(../fonts/Lato-Reg.ttf);
+}
+
+@font-face
+{
+font-family: lato_lig;
+src: url(../fonts/Lato-Lig.ttf);
+}
+
+@font-face
+{
+font-family: muli-reg;
+src: url(../fonts/Muli-Regular.ttf);
 }
 
 /*end form login*/
@@ -156,8 +174,15 @@ src: url(../fonts/WOL_Reg.woff);
 
 /*end loader*/
 
-/*administrator*/
+/*cropimage*/
+#image-crop{
+      width: 200px;
+      height: 150px;
+      position:relative; /* or fixed or absolute */
+    }
+/*end*/
 
+.bottom-space {
+  margin-bottom: 50px;
+}
 
-
-/*end administrator*/

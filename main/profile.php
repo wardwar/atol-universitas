@@ -1,7 +1,7 @@
 <?php
 $level = 1;
 require_once '../core/init.php';
-
+$page = "main";
 include '../includes/overall/header.php';
 
 $nav = 'profile';

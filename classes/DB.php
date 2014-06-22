@@ -3,8 +3,8 @@ class DB {
 	private static $_instance = null;
 	private $_pdo,
 			$_query,
-			$_error = false, 
-			$_results, 
+			$_error = false,
+			$_results,
 			$_count = 0;
 
 	private function __construct() {
@@ -46,13 +46,13 @@ class DB {
 		if(count($where) === 3) {
 			$operetors = array('=', '>', '<', '>=', '<=');
 
-			$field		= 	$where[0];
+			$field		= $where[0];
 			$operator	=	$where[1];
 			$value 		=	$where[2];
 
 			if(in_array($operator, $operetors)) {
 				$sql = "{$action} FROM {$table} WHERE {$field} {$operator} ? ";
-				
+
 				if(!$this->query($sql, array($value))->error()) {
 					return $this;
 				}
@@ -99,8 +99,8 @@ class DB {
 			}
 			return false;
 		}
-		
-	
+
+
 
 	public function update($table, $id, $fields) {
 		$set = '';
@@ -121,7 +121,7 @@ class DB {
 		}
 
 		$sql = "UPDATE {$table} SET {$set} WHERE {$where}";
-		
+
 		if(!$this->query($sql, $fields)->error()) {
 				return true;
 			}
@@ -135,5 +135,5 @@ class DB {
 	public function count() {
 		return $this->_count;
 	}
-	
+
 }

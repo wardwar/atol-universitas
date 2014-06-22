@@ -2,6 +2,7 @@
 
 $level = 1;
 require_once '../core/init.php';
+$page = "admin";
 
 // global 
 $user = new User();

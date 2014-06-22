@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" id="main-nav" role="navigation" <?php if(!empty($nav)) { if($nav == 'profile') { echo "style='padding :0;'";}} ?> >
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                <a class="navbar-brand" href="<?=Url::base()?>">UNIBO</a>
+                <a class="navbar-brand" href="<?=Url::base()?>"><span class="brand">UNIBO</span></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,6 +60,8 @@
                             <li><a href="pricing.html">Pricing Table</a>
                             </li>
                         </ul>
+                    </li>
+                    <li><a href="login"><span class="text-primary"><strong>Login!</strong></span></a>
                     </li>
                 </ul>
             </div>
