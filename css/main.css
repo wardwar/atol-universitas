@@ -63,7 +63,10 @@ body {
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size: cover;
+   overflow: hidden;
+        margin: auto;
+        cursor: -webkit-grab;
+
 }
 
 /* Social Icons Styles */
@@ -205,6 +208,14 @@ p {
   background-size:   cover;                      /* <------ */
   background-repeat: no-repeat;
   margin-bottom: 50px;
+}
+
+.logo-nav{
+  background-image: url('../assets/img/ubnew.png');
+  width: 60px;
+  height: 60px;
+  background-size:   cover;                      /* <------ */
+  background-repeat: no-repeat;
 }
 
 

@@ -13,17 +13,14 @@ public function check($source, $items = array()) {
 	foreach($items as $item => $rules) {
 		foreach($rules as $rule => $rule_value) {
 
-			
-			if($source == $_FILES){
+			$value = $source[$item];
+			if($source == $_FILES) {
 				$value = $source[$item]['name'];
-			}else {
-				$value = $source[$item];
 			}
-			
 			$item = escape($item);
 
 			if($rule == 'required' && empty($value)) {
-				$this->addError("{$rules['nama']} is required");
+				$this->addError("{$rules[nama]} is required");
 			} else if(!empty($value)) {
 				switch ($rule) {
 					case 'min':
@@ -58,7 +55,7 @@ public function check($source, $items = array()) {
 						$extn = strtolower(end($file_extn));
 
 						if(in_array($extn, $rule_value) === false){
-							$this->addError('Extensi photo harus : ' . implode(' , ', $rule_value) . '.');
+							$this->addError("Extensi {$rules[nama]} harus : " . implode(" , ", $rule_value) . ".");
 						}
 						break;
 				}

@@ -183,6 +183,20 @@ src: url(../fonts/Muli-Regular.ttf);
 /*end*/
 
 .bottom-space {
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 
+/*drag*/
+.wrap {
+        width: 850px;
+        height: 280px;
+        overflow: hidden;
+        margin: auto;
+        cursor: -webkit-grab;
+
+      }
+.blk {
+  background-color: rgba(0,0,0,0.8);
+  z-index: -1;
+}
+/* end */

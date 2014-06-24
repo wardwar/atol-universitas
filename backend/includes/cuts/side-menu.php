@@ -43,7 +43,13 @@
 	                            <a href="#"><i class="glyphicon glyphicon-home fa-fw"></i> Config Beranda<span class="fa arrow"></span></a>
 	                            <ul class="nav nav-second-level">
 	                                <li>
-	                                    <a href="<?=Url::base()?>admin/slide">Gambar Slide</a>
+	                                    <a href="<?=Url::base()?>admin/slide">Gambar Slide <span class="badge text-success">
+																			<?php
+																				$badge = DB::getInstance()->query("SELECT * FROM slide");
+
+																				echo $badge->count();
+																			?>
+	                                    </span></a>
 	                                </li>
 	                            </ul>
 	                            <!-- /.nav-thrid-level -->
@@ -90,9 +96,11 @@
 	                        <li>
 	                            <a href="<?=Url::base()?>admin/kerjasama"><i class="glyphicon glyphicon-globe fa-fw"></i> Kerjasama</a>
 	                        </li>
+
+
 	                        <!-- /.nav-nine-level -->
 
-	                        
+
 	                </div>
 	                <!-- /.sidebar-collapse -->
 	            </div>

@@ -21,25 +21,26 @@ $nav = 'index';
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('assets/img/slide/monster.jpg');"></div>
+
+        <?php
+            $img = DB::getInstance()->query("SELECT * FROM slide");
+
+            foreach ($img->results() as $key) {
+                ?>
+
+                <div class="item<?php if($key->active == 1) echo ' active' ?>">
+                <div class="fill"><img src="assets/slide/<?=$key->path?>" style="width: 100%; position: relative; top: <?=$key->scale?>px;"></div>
                 <div class="carousel-caption">
-                    <h1 class="slide">UNIVERSITAS BORNEO<br><small class="slide">Better Than Other</small></h1>
+                    <h1 class="slide"><?=$key->nama?><br><small class="slide"><?=$key->deskripsi?></small></h1>
                 </div>
+
             </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h1>Ready to Style &amp; Add Content</h1>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h1>Additional Layout Options at <a href="http://startbootstrap.com">http://startbootstrap.com</a>
-                    </h1>
-                </div>
-            </div>
+            <?php
+
+            }
+
+        ?>
+
         </div>
 
         <!-- Controls -->

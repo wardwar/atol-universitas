@@ -38,7 +38,8 @@ if(Input::exists()) {
 					'username' => Input::get('username'),
 					'password' => Hash::make(Input::get('password'), $salt),
 					'salt' => $salt,
-					'name' => Input::get('name')
+					'name' => Input::get('name'),
+					'group' => 3
 					));
 
 				Session::flash('success', 'Berhasil Register!');
@@ -47,7 +48,7 @@ if(Input::exists()) {
 			} catch(Exception $e) {
 				die($e->getMessage());
 			}
-			
+
 		} else {
 			foreach ($validation->errors() as $error) {
 				echo $error, '<br>';
@@ -79,5 +80,5 @@ if(Input::exists()) {
 	</div>
 	<input type="hidden" name="token" value="<?php echo Token::generate(); ?>">
 	<input type="submit" value="Register">
-	
+
 </form>

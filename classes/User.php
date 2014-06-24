@@ -28,9 +28,9 @@ class User {
 	public function create($table,$fields) {
 		if(!$this->_db->insert($table,$fields)) {
 			throw new Exception("Error Processing Request");
-			
 		}
 	}
+
 
 	public function find($user = null) {
 		if($user) {
@@ -70,4 +70,6 @@ class User {
 	public function isLoggedin() {
 		return $this->_isLoggedIn;
 	}
+
+
 }
